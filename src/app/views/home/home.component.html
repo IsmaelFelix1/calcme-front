@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <img src="../../../assets/img/calcme-V7-3.1.png">
+    </div>
+  </div>
+  <div class="row">
+    <div>
+
+      <form [formGroup]="formGroup">
+        <div class="boxInputName">
+          <label for="inputEmail" class="textLabel">Nome</label>
+          <input type="text" class="form-control" id="inputEmail" formControlName="name">
+          <span *ngIf="formGroup.controls.name.errors?.required" class="textValidation">Campo obrigatório</span>
+        </div>
+        <div class="boxInputEmail">
+          <label for="inputEmail" class="#">Email</label>
+          <input type="email" class="form-control" id="inputEmail" formControlName="email">
+          <span *ngIf="formGroup.controls.email.errors?.required" class="textValidation" >Campo obrigatório</span>
+          <span *ngIf="formGroup.controls.email.errors?.email" class="textValidation">E-mail inválido</span>
+        </div>
+        <div class="boxInputPhone">
+          <label for="inputEmail" class="#">Telefone</label>
+          <input type="text" class="form-control" id="inputEmail" formControlName="phone">
+          <span *ngIf="formGroup.controls.phone.errors" class="textValidation">Campo obrigatório</span>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!formGroup.valid" >Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>

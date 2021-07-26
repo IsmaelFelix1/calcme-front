@@ -1,0 +1,17 @@
+.boxInputName,
+.boxInputEmail,
+.boxInputPhone{
+    margin-bottom: 10px ;
+}
+
+
+.textValidation {
+    color: red;
+    font-weight: 300
+}
+
+label{
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
